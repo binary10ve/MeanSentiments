@@ -1,0 +1,33 @@
+<!-- ******PROMO****** -->
+    <section id="promo" class="promo section offset-header" style="margin-top:50px;">
+        <div class="container text-center">
+            <!-- <img src="/img/meanstack.svg" height="500"> -->
+            <p class="intro">
+            <form class="form-horizontal">
+                <textarea class="form-control" rows="2" ng-model="sentiments"></textarea>
+                </form>
+
+            </p>
+            <p>
+            <button class="btn-primary" ng-click="doAnalysis()">Analyse</button>
+            </p>
+        </div><!--//container-->
+    </section><!--//promo-->
+    
+    <!-- ******ABOUT****** --> 
+    <section id="about" class="about section" ng-if="analysis">
+        <div class="container">
+            <!-- <h2 class="title text-center">Analysis</h2> -->
+            <div class="panel panel-default">
+              <!-- Default panel contents -->
+              <div class="panel-heading">Analysis</div>
+              <div class="panel-body">
+                    <rm-json-pretty-print json="{{analysis}}" styles='{"stringColor" : "#A52A2A"}'>
+                    </rm-json-pretty-print>                  
+              </div>
+              <!-- List group -->
+              
+            </div>
+        </div><!--//container-->
+    </section><!--//about-->
+    
